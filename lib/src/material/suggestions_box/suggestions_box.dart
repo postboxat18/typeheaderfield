@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:typeheaderfield/src/material/field/typeahead_field.dart';
+import 'package:typeheaderfield/src/material/typeahead_field.dart';
 
 class SuggestionsBox {
   static const int waitMetricsTimeoutMillis = 1000;

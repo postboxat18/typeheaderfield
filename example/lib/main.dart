@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:typeheaderfield/src/material/field/text_field_configuration.dart';
 import 'package:typeheaderfield/typeheaderfield.dart';
-
 void main() {
   runApp(const MyApp());
 }

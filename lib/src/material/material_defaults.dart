@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:typeheaderfield/src/common/base/suggestions_controller.dart';
 import 'package:typeheaderfield/src/common/base/types.dart';
 
-/// A set of Material specific default builders used by a TypeAheadField.
+/// A set of Material specific default builders used by a TypeHeaderField.
 abstract final class TypeAheadMaterialDefaults {
-  /// The default loading builder used by a TypeAheadField.
+  /// The default loading builder used by a TypeHeaderField.
   /// Displays a centered [CircularProgressIndicator].
   static Widget loadingBuilder(BuildContext context) {
     return const Padding(
@@ -16,7 +16,7 @@ abstract final class TypeAheadMaterialDefaults {
     );
   }
 
-  /// The default error builder used by a TypeAheadField.
+  /// The default error builder used by a TypeHeaderField.
   /// Displays the error message in [ThemeData.colorScheme.error].
   static Widget errorBuilder(BuildContext context, Object? error) {
     String message = 'An error has occured';
@@ -30,7 +30,7 @@ abstract final class TypeAheadMaterialDefaults {
     );
   }
 
-  /// The default empty builder used by a TypeAheadField.
+  /// The default empty builder used by a TypeHeaderField.
   /// Displays 'No items found!'.
   static Widget emptyBuilder(BuildContext context) {
     return Padding(
@@ -43,7 +43,7 @@ abstract final class TypeAheadMaterialDefaults {
     );
   }
 
-  /// A Wrapper around the item builder of a TypeAheadField.
+  /// A Wrapper around the item builder of a TypeHeaderField.
   /// Provides the functionality to select an item on tap.
   static SuggestionsItemBuilder<T> itemBuilder<T>(
     SuggestionsItemBuilder<T> builder,
@@ -57,7 +57,7 @@ abstract final class TypeAheadMaterialDefaults {
     };
   }
 
-  /// A Wrapper around the suggestions box of a TypeAheadField.
+  /// A Wrapper around the suggestions box of a TypeHeaderField.
   /// Adds various Material specific decorations.
   static SuggestionsItemBuilder<Widget> wrapperBuilder(
     DecorationBuilder? builder,
@@ -70,7 +70,7 @@ abstract final class TypeAheadMaterialDefaults {
     };
   }
 
-  /// The default decoration builder used by a TypeAheadField.
+  /// The default decoration builder used by a TypeHeaderField.
   static Widget decorationBuilder(
     BuildContext context,
     Widget child,
@@ -83,7 +83,7 @@ abstract final class TypeAheadMaterialDefaults {
     );
   }
 
-  /// The default text field builder used by a TypeAheadField.
+  /// The default text field builder used by a TypeHeaderField.
   static Widget builder(
     BuildContext context,
     TextEditingController controller,

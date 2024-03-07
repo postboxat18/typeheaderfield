@@ -43,7 +43,7 @@ import 'package:pointer_interceptor/pointer_interceptor.dart';
 ///
 /// ### Example 1:
 /// ```dart
-/// TypeAheadField(
+/// TypeHeaderField(
 ///   textFieldConfiguration: TextFieldConfiguration(
 ///     autofocus: true,
 ///     style: DefaultTextStyle.of(context).style.copyWith(
@@ -241,14 +241,14 @@ import 'package:pointer_interceptor/pointer_interceptor.dart';
 /// )
 /// ```
 /// A [FormField](https://docs.flutter.io/flutter/widgets/FormField-class.html)
-/// implementation of [TypeAheadField], that allows the value to be saved,
+/// implementation of [TypeHeaderField], that allows the value to be saved,
 /// validated, etc.
 ///
 /// See also:
 ///
-/// * [TypeAheadField], A [TextField](https://docs.flutter.io/flutter/material/TextField-class.html)
+/// * [TypeHeaderField], A [TextField](https://docs.flutter.io/flutter/material/TextField-class.html)
 /// that displays a list of suggestions as the user types
-class TypeAheadField<T> extends StatefulWidget {
+class TypeHeaderField<T> extends StatefulWidget {
   /// Called with the search pattern to get the search suggestions.
   ///
   /// This callback must not be null. It is be called by the TypeAhead widget
@@ -543,8 +543,8 @@ class TypeAheadField<T> extends StatefulWidget {
   // Adds a callback for the suggestion box opening or closing
   final void Function(bool)? onSuggestionsBoxToggle;
 
-  /// Creates a [TypeAheadField]
-  const TypeAheadField({
+  /// Creates a [TypeHeaderField]
+  const TypeHeaderField({
     required this.suggestionsCallback,
     required this.itemBuilder,
     this.itemSeparatorBuilder,
@@ -588,10 +588,10 @@ class TypeAheadField<T> extends StatefulWidget {
             hideKeyboardOnDrag && !hideSuggestionsOnKeyboardHide);
 
   @override
-  State<TypeAheadField<T>> createState() => _TypeAheadFieldState<T>();
+  State<TypeHeaderField<T>> createState() => _TypeHeaderFieldState<T>();
 }
 
-class _TypeAheadFieldState<T> extends State<TypeAheadField<T>>
+class _TypeHeaderFieldState<T> extends State<TypeHeaderField<T>>
     with WidgetsBindingObserver {
   FocusNode? _focusNode;
   final KeyboardSuggestionSelectionNotifier
@@ -736,7 +736,7 @@ class _TypeAheadFieldState<T> extends State<TypeAheadField<T>>
     super.didChangeDependencies();
     final scrollableState = Scrollable.maybeOf(context);
     if (scrollableState != null) {
-      // The TypeAheadField is inside a scrollable widget
+      // The TypeHeaderField is inside a scrollable widget
       _scrollPosition = scrollableState.position;
 
       _scrollPosition!.removeListener(_scrollResizeListener);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:typeheaderfield/src/material/typeahead_field.dart';
+import 'package:typeheaderfield/src/material/typeheaderfield.dart';
 
 class SuggestionsBox {
   static const int waitMetricsTimeoutMillis = 1000;
@@ -101,7 +101,7 @@ class SuggestionsBox {
   // See if there's enough room in the desired direction for the overlay to display
   // correctly. If not, try the opposite direction if things look more roomy there
   void _adjustMaxHeightAndOrientation() {
-    TypeAheadField widget = context.widget as TypeAheadField;
+    TypeHeaderField widget = context.widget as TypeHeaderField;
 
     RenderBox? box = context.findRenderObject() as RenderBox?;
     if (box == null || box.hasSize == false) {
@@ -158,7 +158,7 @@ class SuggestionsBox {
   double _calculateMaxHeight(
       AxisDirection direction,
       RenderBox box,
-      TypeAheadField widget,
+      TypeHeaderField widget,
       double windowHeight,
       MediaQuery rootMediaQuery,
       double keyboardHeight,
@@ -172,7 +172,7 @@ class SuggestionsBox {
 
   double _calculateMaxHeightDown(
       RenderBox box,
-      TypeAheadField widget,
+      TypeHeaderField widget,
       double windowHeight,
       MediaQuery rootMediaQuery,
       double keyboardHeight,
@@ -192,7 +192,7 @@ class SuggestionsBox {
 
   double _calculateMaxHeightUp(
       RenderBox box,
-      TypeAheadField widget,
+      TypeHeaderField widget,
       double windowHeight,
       MediaQuery rootMediaQuery,
       double keyboardHeight,

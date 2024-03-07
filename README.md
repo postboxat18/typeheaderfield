@@ -10,3 +10,6 @@ This package offers text field suggestions with dropdown functionality, enhancin
 - Easy integration into existing forms or applications.
 - Customizable styling and behavior to suit various use cases.
 - Efficient data handling and management for seamless user input.
+
+## License
+This package is open-source and available under the [MIT License](LICENSE).

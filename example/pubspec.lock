@@ -306,10 +306,10 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "719eb8086ce9979b7c0f2e253b8df8f0dbdcd154"
+      resolved-ref: c50e22caabe0ee049bd818b3a99d7c17dcba7b8f
       url: "https://github.com/postboxat18/typeheaderfield.git"
     source: git
-    version: "0.0.2"
+    version: "0.0.3"
   vector_math:
     dependency: transitive
     description:
